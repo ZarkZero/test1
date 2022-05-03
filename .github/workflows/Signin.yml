@@ -22,9 +22,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       
-    - name: Nodejs Install Module
+    - name: Install Nodejs Module
       run: |
-        npm install -g request
+       git clone https://github.com/request/request.git
+       cd request
+       npm install
+       cd ..
 
     - name: Get Script
       run: |
