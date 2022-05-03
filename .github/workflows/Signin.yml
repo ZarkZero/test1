@@ -22,12 +22,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
+    - name: Install Nodejs Module
+      run: |
+       git clone https://github.com/request/request.git
+       cd request
+       cnpm install
+       cd ..
+
     - name: Get Script
       run: |
         git clone https://github.com/ZarkZero/test1.git
         cd test1
-        npm init --yes
-        npm install request --save
 
     - name: Run Script
       run: |
