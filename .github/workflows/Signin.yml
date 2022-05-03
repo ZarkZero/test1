@@ -17,19 +17,14 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    
-    strategy:
-      matrix:
-        node-version: [10.x]
 
     steps:
     - name: Checkout
       uses: actions/checkout@main
-
-    - name: Using Node version ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+      
+    - name: Nodejs Install Module
+      run: |
+        npm install -g request
 
     - name: Get Script
       run: |
