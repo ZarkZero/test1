@@ -26,6 +26,7 @@ jobs:
       run: |
         git clone https://github.com/ZarkZero/test1.git
         cd test1
+        npm install request
 
     - name: Run Script
       run: |
