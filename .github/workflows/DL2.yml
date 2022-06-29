@@ -1,0 +1,48 @@
+name: Download-anything
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+
+env:
+ TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Initialization environment
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo timedatectl set-timezone "$TZ"
+
+    - name: Clone source code
+      run: |
+       git clone https://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak
+
+    - name: Achieve
+      run: |
+       cd ..
+       mkdir packup
+       7z a packup/qsdk-12.7z /home/runner/work/test1/test1/*
+
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@main
+      with:
+        name: qsdk-12
+        path: /home/runner/work/test1/packup
+
+
+#Alternatively
+#caf_AU_LINUX_QSDK_NHSS.QSDK.11.5.0.5.R7_TARGET_ALL.12.0.000.934.009.xml
+
