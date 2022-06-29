@@ -1,4 +1,4 @@
-name: Download-anything
+name: DL-2
 
 on:
   repository_dispatch:
