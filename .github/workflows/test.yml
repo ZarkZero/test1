@@ -31,7 +31,6 @@ jobs:
        curl https://storage.googleapis.com/git-repo-downloads/repo -o repo
        chmod +x repo
        ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.12.1.R2_TARGET_ALL.12.1.02.841.013.xml
-#caf_AU_LINUX_QSDK_NHSS.QSDK.11.5.0.5.R7_TARGET_ALL.12.0.000.934.009.xml
        ls
        ./repo sync
        ls
@@ -47,3 +46,7 @@ jobs:
       with:
         name: qsdk-12
         path: /home/runner/work/test1/packup
+
+
+#Alternatively
+#caf_AU_LINUX_QSDK_NHSS.QSDK.11.5.0.5.R7_TARGET_ALL.12.0.000.934.009.xml
