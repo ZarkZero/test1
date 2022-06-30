@@ -36,6 +36,7 @@ jobs:
        ls
 
     - name: Achieve
+      id: achieve
       run: |
        cd ..
        mkdir packup
@@ -43,7 +44,7 @@ jobs:
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
-      if: !cancelled()
+      if: steps.achieve.outputs.status == 'success' && !cancelled()
       with:
         name: qsdk-11.1
         path: /home/runner/work/test1/packup
