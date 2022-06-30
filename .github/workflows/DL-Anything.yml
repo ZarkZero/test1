@@ -30,7 +30,7 @@ jobs:
       run: |
        curl https://storage.googleapis.com/git-repo-downloads/repo -o repo
        chmod +x repo
-       ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.11.0_TARGET_ALL.11.0.3821.4517.xml
+       ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.11.2_TARGET_ALL.12.0.4959.5165.xml
        ls
        ./repo sync
        ls
@@ -40,13 +40,13 @@ jobs:
       run: |
        cd ..
        mkdir packup
-       7z a packup/qsdk-11.0.7z /home/runner/work/test1/test1/*
+       7z a packup/qsdk-11.2.7z /home/runner/work/test1/test1/*
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       if: steps.achieve.outputs.status == 'success' && !cancelled()
       with:
-        name: qsdk-11.0
+        name: qsdk-11.2
         path: /home/runner/work/test1/packup
 
 
