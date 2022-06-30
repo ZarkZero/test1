@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Initialization environment
+      id: init
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -44,7 +45,7 @@ jobs:
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
-      if: steps.achieve.outputs.status == 'success' && !cancelled()
+      if: steps.init.outputs.status == 'success'
       with:
         name: qsdk-11.4
         path: /home/runner/work/test1/packup
