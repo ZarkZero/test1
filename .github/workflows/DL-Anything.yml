@@ -41,7 +41,7 @@ jobs:
       run: |
        cd ..
        mkdir packup
-       7z a packup/qsdk-11.5.7z /home/runner/work/test1/test1/*
+       tar -czf packup/qsdk-11.5.tar.gz /home/runner/work/test1/test1/*
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
