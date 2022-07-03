@@ -31,7 +31,7 @@ jobs:
       run: |
        curl https://storage.googleapis.com/git-repo-downloads/repo -o repo
        chmod +x repo
-       ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.11.5_TARGET_ALL.11.5.0.7762.7876.xml
+       ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.11.5.0.6_TARGET_ALL.11.5.0.6.055.xml
        ls
        ./repo sync
        ls
