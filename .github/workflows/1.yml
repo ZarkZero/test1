@@ -1,4 +1,4 @@
-name: Download-qstak
+name: Download-anything
 
 on:
   repository_dispatch:
@@ -31,19 +31,21 @@ jobs:
       run: |
        curl https://storage.googleapis.com/git-repo-downloads/repo -o repo
        chmod +x repo
-       ./repo init -u git://source.codeaurora.org/quic/cc-qrdk/releases/manifest/qstak -b release -m caf_AU_LINUX_QSDK_NHSS.QSDK.12.1.R2_TARGET_ALL.12.1.02.841.013.xml
+       ./repo init -m caf_AU_LINUX_QSDK_NHSS.QSDK.12.1.R2_TARGET_ALL.12.1.02.841.013.xml
+       ./repo sync
+       ls
 
     - name: Achieve
       id: achieve
       run: |
        cd ..
        mkdir packup
-       7z a packup/qstak.7z /home/runner/work/test1/test1/*
+       tar -czf packup/qsdk-12.tar.gz /home/runner/work/test1/test1/*
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       with:
-        name: qstak
+        name: qsdk-12
         path: /home/runner/work/test1/packup
 
 
