@@ -1,4 +1,4 @@
-name: Download-anything
+name: Download-qstac
 
 on:
   repository_dispatch:
