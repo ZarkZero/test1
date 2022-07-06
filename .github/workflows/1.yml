@@ -31,8 +31,7 @@ jobs:
       run: |
        curl https://storage.googleapis.com/git-repo-downloads/repo -o repo
        chmod +x repo
-       ./repo init -m caf_AU_LINUX_QSDK_NHSS.QSDK.12.1.R2_TARGET_ALL.12.1.02.841.013.xml
-       ./repo sync
+       ./repo sync caf_AU_LINUX_QSDK_NHSS.QSDK.12.1.R2_TARGET_ALL.12.1.02.841.013.xml
        ls
 
     - name: Achieve
