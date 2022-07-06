@@ -10,7 +10,7 @@
   <project name="quic/qsdk/oss/feeds/nss" path="qsdk/qca/feeds/nss" revision="f33e99a3e2c2e76376a46de474eec0e7cd7528ec" upstream="NHSS.QSDK.12.1.r2"/>
   <project name="quic/qsdk/oss/hyfi/qca-hyfi-bridge" path="qsdk/qca/src/qca-hyfi-bridge" revision="36daa864fb772504250eb224028908dc7d32b762" upstream="NHSS.QSDK.12.1.r2"/>
   <project name="quic/qsdk/oss/hyfi/qca-hyfi-qdisc" path="qsdk/qca/src/qca-hyfi-qdisc" revision="846e528e85b46da233a03fc025a24783e2c5a18b" upstream="NHSS.QSDK.12.1.r2"/>
-  <project name="quic/qsdk/oss/kernel/linux-ipq-5.4" path="qsdk/qca/src/linux-5.4" revision="00247dc8f13db53dc06ce61e7cd31d819a75a584" upstream="NHSS.QSDK.12.1.r2"/>
+  <project name="quic/qsdk/oss/kernel/linux-msm" path="qsdk/qca/src/linux-4.4" revision="e44da124e4a63f00daf1053c8164ecd5d2287100" upstream="NHSS.QSDK.11.5.0.4.r7"/>
   <project name="quic/qsdk/oss/lklm/emesh-sp" path="qsdk/qca/src/emesh-sp" revision="f8d9e6982feed660e91fe97a84380dfbed9b29f4" upstream="NHSS.QSDK.12.1.r2"/>
   <project name="quic/qsdk/oss/lklm/nss-cfi" path="qsdk/qca/src/qca-nss-cfi" revision="2c0766727975b7ae5f4b5659b5be727271650c85" upstream="NHSS.QSDK.12.1.r2"/>
   <project name="quic/qsdk/oss/lklm/nss-clients" path="qsdk/qca/src/qca-nss-clients" revision="585489e44cb39dc0e81443fd620e6b43bfad67d0" upstream="NHSS.QSDK.12.1.r2"/>
