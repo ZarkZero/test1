@@ -1,4 +1,4 @@
-name: Download-qstac
+name: Download-qstak
 
 on:
   repository_dispatch:
@@ -38,7 +38,7 @@ jobs:
       run: |
        cd ..
        mkdir packup
-       7z -c packup/qstak.7z /home/runner/work/test1/test1/*
+       7z c packup/qstak.7z /home/runner/work/test1/test1/*
 
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
