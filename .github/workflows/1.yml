@@ -1,4 +1,4 @@
-name: Download-anything
+name: Download-1
 
 on:
   repository_dispatch:
